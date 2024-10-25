@@ -2,6 +2,7 @@ title: boutique
 description: >
   Boutique en ligne frugale pour mettre en vente des objets ou des prestations
 theme: jekyll-theme-minimal
+lang: fr
 
 repository: brutdethe/boutique-jekyll
 
