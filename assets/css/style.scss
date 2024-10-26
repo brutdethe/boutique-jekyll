@@ -10,7 +10,47 @@
 
 article, aside, footer, header, nav, section {
   display: block;
+}
 
+.columns {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: -.4rem;
+    margin-right: -.4rem;
+}
+
+.column {
+    -ms-flex: 1;
+    flex: 1;
+    max-width: 100%;
+    padding-left: .4rem;
+    padding-right: .4rem;
+}
+
+.column.col-1,
+.column.col-10,
+.column.col-11,
+.column.col-12,
+.column.col-2,
+.column.col-3,
+.column.col-4,
+.column.col-5,
+.column.col-6,
+.column.col-7,
+.column.col-8,
+.column.col-9 {
+  -ms-flex: none;
+  flex: none;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-7 {
+    width: 58.33333333%;
 }
 
 // end spectre
@@ -28,6 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0 0 0.5em 0;
 	font-weight: 400;
 	line-height: 1.2;
+    margin-top: 0;
 }
 
 h1 {
