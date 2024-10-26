@@ -1,9 +1,19 @@
 --- 
 ---
 
+
+// spectre : to verify
+
 *, ::after, ::before {
   box-sizing: inherit;
 }
+
+article, aside, footer, header, nav, section {
+  display: block;
+
+}
+
+// end spectre
 
 body {
 	margin: 0;
@@ -43,6 +53,28 @@ a:hover {
     color: #6b5f45;
 }
 
+ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* clearfix */
+    
+ul::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+li {
+    display: block;
+    float: left;
+    margin-top: 0;
+}
+
 header {
     max-width: 90em;
     margin: auto;
@@ -52,12 +84,17 @@ header {
     padding: 0 2em;
 }
 
-ul {
-    display: flex;
-    justify-content: flex-end;
+footer {
+    border-top: 1px solid rgba(255, 62, 0, 0.1);
+    padding: 1.8rem 0.75rem 1rem;
+    position: relative;
+    z-index: 200;
+}
+
+footer ul {
     margin: 0;
-    padding: 0;
-    list-style-type: none;
+    display: block;
+    float: left;
 }
 
 .logo,
@@ -148,20 +185,6 @@ ul {
     justify-content: flex-end;
     line-height: 4em;
     text-align: right;
-}
-
-/* clearfix */
-    
-ul::after {
-    content: '';
-    display: block;
-    clear: both;
-}
-
-li {
-    display: block;
-    float: left;
-    margin-top: 0;
 }
 
 @media (min-width: 1400px) {
